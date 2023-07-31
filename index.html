@@ -38,22 +38,22 @@
 
             <section class="section--page">
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
-                    <p class="tab-links" onclick="opentab('contact')">Contact</p>
+                    <p id="skills-tab" class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p id="education-tab" class="tab-links" onclick="opentab('education')">Education</p>
+                    <p id="contact-tab" class="tab-links" onclick="opentab('contact')">Contact</p>
 
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
                     
-                        <li><span>WEB APP TESTING</span><br>Selenium Webdriver, QTP</li>
-                        <li><span>MOBILE APP TESTING</span><br>Appium</li>
-                        <li><span>DEFECT TRACKING</span><br>Jira, MHWeb, Bugzilla</li>
-                        <li><span>PROGRAMMING</span><br>C, C++, JAVA</li>
-                        <li><span>SCRIPTING</span><br>Groovy, Unix shell, VB SCripting</li>
-                        <li><span>LOAD TESTING</span><br>JMeter, LoadUI</li>
-                        <li><span>API TESTING</span><br>RestAssured, Postman, SoapUI</li>
-                        <li><span>DATABASE</span><br>SQL server, Oracle, Cassandra, Mongo db</li>
+                        <li id="web-app-testing"><span>WEB APP TESTING</span><br>Selenium Webdriver, QTP</li>
+                        <li id="mobile-app-testing"><span>MOBILE APP TESTING</span><br>Appium</li>
+                        <li id="defect-tracking"><span>DEFECT TRACKING</span><br>Jira, MHWeb, Bugzilla</li>
+                        <li id="programming"><span>PROGRAMMING</span><br>C, C++, JAVA</li>
+                        <li id="scripting"><span>SCRIPTING</span><br>Groovy, Unix shell, VB SCripting</li>
+                        <li id="load-testing"><span>LOAD TESTING</span><br>JMeter, LoadUI</li>
+                        <li id="api-testing"><span>API TESTING</span><br>RestAssured, Postman, SoapUI</li>
+                        <li id="database"><span>DATABASE</span><br>SQL server, Oracle, Cassandra, Mongo db</li>
             
 
                     </ul>
@@ -69,9 +69,9 @@
                 <div class="tab-contents" id="contact">
                     <ul>
                     
-                        <li><span>EMAIL</span><br>👉 <a href="mailto:janerasika20@gmail.com">janerasika20@gmail.com</a></li> 
-                        <li><span>LINKEDIN</span><br>👉 <a href="https://www.linkedin.com/in/janeras" target="_blank">www.linkedin.com/in/janeras</a></li> 
-                        <li><span> RESUME</span><br><a href="./assets/Resume.docx" download class="btn btn2">Download Resume</a></li>        
+                        <li id="email"><span>EMAIL</span><br>👉 <a href="mailto:janerasika20@gmail.com">janerasika20@gmail.com</a></li> 
+                        <li id="linkedin"><span>LINKEDIN</span><br>👉 <a href="https://www.linkedin.com/in/janeras" target="_blank">www.linkedin.com/in/janeras</a></li> 
+                        <li id="resume"><span> RESUME</span><br><a href="./assets/Resume.docx" download class="btn btn2">Download Resume</a></li>        
 
                     </ul>
                 </div>
@@ -144,11 +144,11 @@
                         <div class="contact-right">
                             <h4 class="sub-title" style="white-space: nowrap;">Contact Me</h4>
                             <form name="submit-to-google-sheet">
-                                <input type="text" name="Name" placeholder="Your Name" required>
-                                <input type="email" name="Email" placeholder="Your Email" required>
-                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                                <button type="submit" class="btn btn2">Submit</button>
-                                <button onclick="scrollToTop()">Scroll to Top</button>
+                                <input type="text" name="Name" id="nameInput" placeholder="Your Name" required>
+                                <input type="email" name="Email" id="emailInput" placeholder="Your Email" required>
+                                <textarea name="Message" id="messageInput" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn btn2" id="submitButton">Submit</button>
+                                <button onclick="scrollToTop()" id="scrollToTopButton">Scroll to Top</button>
                             </form>
                             <span id="msg"></span>
                         </div>
